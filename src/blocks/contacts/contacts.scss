@@ -1,0 +1,13 @@
+.contacts {
+    gap: 10px;
+    cursor: pointer;
+    &:hover {
+        & .contacts__icon {
+            opacity: 0.5;
+        }
+    }
+
+    &__icon {
+        transition: 0.5s all ease;
+    }
+}

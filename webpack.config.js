@@ -1,5 +1,4 @@
 
-const FaviconsWebPackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
@@ -49,17 +48,7 @@ fs.writeFile("src/libs/_scripts.js", scripts, (err) => {
 module.exports = {
     mode: mode,
     entry: {
-        'colors-types': './src/pages/colors-types/colors-types.js',
-        'form-elements': './src/pages/form-elements/form-elements.js',
-        'cards': './src/pages/cards/cards.js',
-        'index': './src/pages/index/index.js',
-        'headers-footers': './src/pages/headers-footers/headers-footers.js',
-        'landing-page': './src/pages/landing-page/landing-page.js',
-        'dummy-page': './src/pages/dummy-page/dummy-page.js',
-        'search-room': './src/pages/search-room/search-room.js',
-        'room-details': './src/pages/room-details/room-details.js',
-        'registration': './src/pages/registration/registration.js',
-        'signin': './src/pages/signin/signin.js'
+        'index': './src/pages/index/index.js'
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -81,14 +70,6 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
-        }),
-        new FaviconsWebPackPlugin({
-            logo: './src/images/favicon.svg',
-            mode: 'webapp',
-            devMode: 'webapp',
-            prefix: 'assets/favicons/',
-            cache: true,
-            inject: true
         }),
         ...paths.map((path) => {
             return new HtmlWebpackPlugin({

@@ -1,60 +1,18 @@
-include ../../pug/_image
+include ../location/location.pug
+include ../contacts/contacts.pug
+include ../logo/logo.pug
+include ../signin/signin.pug
+include ../icons/icons.pug
 
-mixin header(props)
-    - props = props || {}
-    - let {existSignUp, isBold} = props
-    .header.header_color_white.header_shadow_big.headers-footers__margin-40
-        .header__container
-            .header__logo
-                +image('svg', 'logoColor')
-            .header__burger
-                span
-            .header__menu
-                .header__navigation
-                    nav.navigation
-                        ul.navigation__list
-                            li.navigation__item
-                                if isBold
-                                    a(class = "navigation__link navigation__link_style-bold") О нас
-                                else
-                                    a(class = "navigation__link") О нас
-                            li.navigation__item.navigation__item_expandable
-                                a(class = "navigation__link navigation__expandable-link")
-                                    |Услуги
-                                    span(class="material-icons expand-arrow") &#xE5CF
-                                    .expandable-list.expandable-list_hidden
-                                        ul.expandable-list__list
-                                            li.expandable-list__item Услуга 1
-                                            li.expandable-list__item Услуга 2
-                                            li.expandable-list__item Услуга 3
-                                            li.expandable-list__item Услуга 4
-                            li.navigation__item
-                                a(class = "navigation__link") Вакансии
-                            li.navigation__item
-                                a(class = "navigation__link") Новости
-                            li.navigation__item.navigation__item_expandable
-                                a(class = "navigation__link navigation__expandable-link")
-                                    |Соглашения
-                                    span(class="material-icons expand-arrow") &#xE5CF
-                                    .expandable-list.expandable-list_hidden
-                                        ul.expandable-list__list
-                                            li.expandable-list__item Соглашение 1
-                                            li.expandable-list__item Соглашение 2
-                                            li.expandable-list__item Соглашение 3
-                                            li.expandable-list__item Соглашение 4
-                if existSignUp
-                    .header__buttons
-                        +button({
-                            title: 'войти',
-                            className: 'button button_style_border click-me',
-                            link: './signin.html'
-                        })
-                        +button({
-                            title: 'зарегистрироваться',
-                            className: 'button button_style_solid click-me',
-                            link: './registration.html'
-                        })
-                else
-                    .header__dummy.dummy
-                        .dummy__border
-                        .dummy__name Юлий Цезарь
+mixin header()
+    .header.d-flex.flex-column
+        .header__contacts.d-flex.justify-content-between.align-items-center
+            .header__geoblock.d-flex.justify-content-between.align-items-center 
+                +location
+                +contacts
+            +logo
+            .header__registrationblock.d-flex.justify-content-between.align-items-center 
+                +signin
+                +icons
+        .header__nav     
+            +navigation       

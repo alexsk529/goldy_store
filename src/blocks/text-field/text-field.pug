@@ -1,8 +1,0 @@
-mixin text-field( props )
-    - props = props || {}
-    - var { labelmain = '', label = '', type = '', placeholder = '', value ='' } = props
-    .text-field
-        if (labelmain != '')
-            h3(class="label label_position_text-field")= labelmain
-            span(class="label label_style_25 label_position_text-field")= label
-        input.text-field__field(placeholder=placeholder type=`${type}` value = value).item

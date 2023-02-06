@@ -1,0 +1,16 @@
+include ../../pug/_image
+
+mixin navigation()
+    .navigation.d-flex.justify-content-between.align-items-center 
+        .navigation__menu.d-flex.justify-content-between.align-items-center 
+            span.regular.regular_brands.regular_transparent каталог
+            span.navigation__item.regular.regular_brands акции
+            span.navigation__item.regular.regular_brands бренды
+            span.navigation__item.regular.regular_brands магазины
+            span.navigation__item.regular.regular_brands о нас
+            span.navigation__item.regular.regular_brands доставка и оплата
+            span.navigation__item.regular.regular_brands статьи
+        .navigation__search.d-flex.justify-content-left.align-items-center
+            .navigation__divider
+            +image('svg', 'search')
+            input.navigation__search-field(placeholder="Поиск по сайту")    

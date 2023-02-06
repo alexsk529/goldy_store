@@ -1,7 +1,0 @@
-
-class ExpandableList {
-    constructor(elem) {
-
-    }
-
-}

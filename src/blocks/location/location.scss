@@ -1,0 +1,30 @@
+.location {
+    
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+
+    &:hover {
+        & .location__icon {
+            opacity: 0.5;
+        }
+    }
+
+    &__icon {
+        transition: 0.5s all ease;
+        margin-right: 10px;
+    }
+
+    & .regular {
+        margin-right: 8px;
+    }
+
+    &__arrow {
+        transition: 0.5s all ease;
+        &_reversed {
+            transform: rotate(180deg);
+        }
+    }
+    
+}

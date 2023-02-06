@@ -1,0 +1,24 @@
+include ../../pug/_image
+
+mixin location()
+    .dropdown
+        button(
+            class="location d-flex justify-content-between align-items-center" 
+            type="button" 
+            data-bs-toggle="dropdown"
+            data-bs-auto-close='outside'
+            data-bs-offset='0,11' 
+            aria-expanded="false"
+            )
+            +image('svg', 'location','location__icon')
+            span.regular Санкт-Петербург
+            +image('svg', 'arrow-down','location__arrow')
+        ul.dropdown-menu
+            li.dropdown-list-item
+                a.dropdown-item.active Санкт-Петербург
+            li.dropdown-list-item
+                a.dropdown-item Москва
+            li.dropdown-list-item
+                a.dropdown-item Нижний Новгород
+            li.dropdown-list-item
+                a.dropdown-item Ростов-на-Дону 

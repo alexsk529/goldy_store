@@ -1,7 +1,0 @@
-mixin button (props)
-    - props = props || {}
-    - let {title = '', isArrow = false, className='',link='./dummy-page.html'} = props
-        a(class=`button ${className}` href = link)
-            span= title
-            if isArrow
-                span(class="material-icons arrow-forward") &#xE5C8

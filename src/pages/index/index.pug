@@ -1,39 +1,11 @@
 include ../../pug/_image.pug
 include ../../pug/_head.pug
+include ../../libs/_libs.pug
 
 doctype html
-
 html(lang="ru")
-    +head('Starting page', 'Starting Page(index)')
-    body
-        .index
-            .index__header
-                +image('svg','logo','uiKit__logo')
-
-            .index__container.card.card_shadow_big
-                h1.widget Hotel Toxin
-                .index__box
-                    h2.widget.index__widget.index__widget_color_pink UI-kit(without Responsive)
-                    ul
-                        li.widget-inside.index_active
-                            a(href='./colors-types.html') Colors & Types
-                        li.widget-inside.index_active
-                            a(href='./form-elements.html') Form Elements
-                        li.widget-inside.index_active
-                            a(href='./cards.html') Cards
-                        li.widget-inside.index_active
-                            a(href='./headers-footers.html') Headers & Footers
-                .index__box
-                    h2.widget.index__widget.index__widget_color_pink Pages (Responsive)
-                    ul
-                        li.widget-inside.index_active
-                            a(href='./landing-page.html') Landing page
-                        li.widget-inside.index_active
-                            a(href='./search-room.html') Search room
-                        li.widget-inside.index_active
-                            a(href='./room-details.html') Room details
-                        li.widget-inside.index_active
-                            a(href='./registration.html') Registration
-                        li.widget-inside.index_active
-                            a(href='./signin.html') Sign in
+    +head('Goldy Store', 'Goldy Store')
+    body.d-flex.flex-column.align-items-center 
+        main.content
+            +header
 

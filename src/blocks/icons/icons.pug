@@ -1,0 +1,12 @@
+include ../../pug/_image
+
+mixin icons()
+    .icons.d-flex.justify-content-between
+        .icons__item.d-flex.justify-content-center.align-items-center
+            +image('svg', 'icon')
+            .icons__badge.d-flex.justify-content-center.align-items-center 
+                span 23
+        .icons__item.d-flex.justify-content-center.align-items-center    
+            +image('svg', 'chart')
+        .icons__item.d-flex.justify-content-center.align-items-center    
+            +image('svg', 'bag')

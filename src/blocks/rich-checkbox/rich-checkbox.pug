@@ -1,9 +1,0 @@
-include ../box-and-label/box-and-label
-
-mixin rich-checkbox (props)
-    - props = props || {}
-    - let {title = 'rich checkbox buttons', str=[]} = props
-    div.rich-checkbox
-        h3.label.label_position_button= title
-        each val in str
-            +rich-box(val)

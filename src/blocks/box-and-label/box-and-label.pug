@@ -1,9 +1,0 @@
-mixin box-and-label(str)
-    - let [label, check=''] = str.split('/')
-    .box-and-label
-        label.box-and-label__label
-            if check == ''
-                input(type = 'checkbox')
-            else if check == 'checked'
-                input(type = 'checkbox' checked)
-            span.body= label

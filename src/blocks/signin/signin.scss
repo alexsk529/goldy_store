@@ -1,0 +1,10 @@
+.signin {
+    gap: 10px;
+
+    &__item {
+        cursor: pointer;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

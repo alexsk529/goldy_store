@@ -1,9 +1,0 @@
-mixin pagination(props)
-    - props = props || {}
-    - var {title = '', description= '1-12 из 100+ вариантов аренды'} = props
-
-    div(class = 'wrapper wrapper_width_wide')
-        if (title !='')
-            h3.label.label_position_button= title
-        div.pagination
-        span(class ="body")= description
