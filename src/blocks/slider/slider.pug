@@ -1,11 +1,27 @@
 include ../../pug/_image
 
 mixin slider()
-    .slider.carousel
+    .slider.carousel(id="carousel")
         .slider__indicators.indicator.d-flex.carousel-indicators 
-            button(class="indicator__item active" aria-current="true" aria-label="Slide 1")
-            button(class="indicator__item" aria-label="Slide 2")
-            button(class="indicator__item" aria-label="Slide 3")
+            button(
+                class="indicator__item active" 
+                aria-current="true" 
+                aria-label="Slide 1" 
+                data-bs-slide-to="0"
+                data-bs-target="#carousel"
+                )
+            button(
+                class="indicator__item" 
+                aria-label="Slide 2" 
+                data-bs-slide-to="1"
+                data-bs-target="#carousel"
+                )
+            button(
+                class="indicator__item" 
+                aria-label="Slide 3" 
+                data-bs-slide-to="2"
+                data-bs-target="#carousel"
+                )
         .slider__inner.carousel-inner     
             .carousel-item.active.slider__item
                 +slide 
@@ -13,7 +29,15 @@ mixin slider()
                 +slide  
             .carousel-item.slider__item
                 +slide 
-        button(class="slider__button slider__button_left carousel-control-prev d-md-flex justify-content-center align-items-center" type="button")
+        button(
+            class="slider__button slider__button_left carousel-control-prev d-md-flex justify-content-center align-items-center" 
+            type="button" 
+            data-bs-target="#carousel"
+            )
             +image('svg', 'arrowleft')
-        button(class="slider__button slider__button_right carousel-control-next d-md-flex justify-content-center align-items-center" type="button")
+        button(
+            class="slider__button slider__button_right carousel-control-next d-md-flex justify-content-center align-items-center" 
+            type="button" 
+            data-bs-target="#carousel"
+            )
             +image('svg', 'arrowright')          

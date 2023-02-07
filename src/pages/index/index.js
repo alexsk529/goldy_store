@@ -30,4 +30,8 @@ Array.from(document.querySelectorAll('.dropdown'))
 Array.from(document.querySelectorAll('.carousel'))
     .forEach(carousel => {
         const slider = new bootstrap.Carousel(carousel);
+        const next = carousel.querySelector('.carousel-control-next');
+        next.addEventListener('click', ()=> slider.next())
+        const prev = carousel.querySelector('.carousel-control-prev');
+        prev.addEventListener('click', ()=> slider.prev())
     })    
