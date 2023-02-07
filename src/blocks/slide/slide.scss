@@ -1,0 +1,45 @@
+.slide {
+    gap: 99px;
+    padding-left: 126px;
+    height: 100%;
+    &__promo{
+        & span.promo:first-child{
+            margin-bottom: 30px;
+        }
+        & span.promo:nth-child(2) {
+            margin-bottom: 54px;
+        }
+    }
+
+    &__more {
+        width: 200px;
+        height: 54px;
+        background-color: #303030;
+        outline: none;
+        border: none;
+        transition: 0.4s all ease;
+        & span {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background-color: #505050;
+        }
+        &:active{
+            background-color: #000000;
+        }
+    }
+
+    &_img {
+        height: auto;
+        max-width: 42.15%;
+        object-fit: cover;
+        margin-top: 12px;
+        margin-right: 36px;
+    }
+}

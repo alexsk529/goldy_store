@@ -1,9 +1,29 @@
 include ../signin/signin.pug
+include ../location/location.pug
 
 mixin mobile-menu()
     .mobile-menu.d-flex.flex-column.justify-content-center.align-items-center 
         input(class='mobile-menu__search' placeholder="Поиск по сайту")
-        .mobile-menu__location 
+        .mobile-menu__location.dropdown 
+            button(
+                class="mobile-menu__button d-flex justify-content-center align-items-center" 
+                type="button" 
+                data-bs-toggle="dropdown"
+                data-bs-auto-close='outside'
+                data-bs-offset='0,11' 
+                aria-expanded="false"
+            )
+                span.regular.regular_brands.regular_big.me-3 Санкт-Петербург
+                +image('svg', 'arrow-down','location__arrow')
+            ul.dropdown-menu.mobile-menu__dropdown
+                li.dropdown-list-item.mobile-menu__item
+                    a.dropdown-item.active.regular_brands.regular_big Санкт-Петербург
+                li.dropdown-list-item.mobile-menu__item
+                    a.dropdown-item.regular_brands.regular_big Москва
+                li.dropdown-list-item.mobile-menu__item
+                    a.dropdown-item.regular_brands.regular_big Нижний Новгород
+                li.dropdown-list-item.mobile-menu__item
+                    a.dropdown-item.regular_brands.regular_big Ростов-на-Дону 
         .mobile-menu__list.d-flex.flex-column.align-items-center
             .mobile-menu__item.d-flex.justify-content-center
                 span.regular.regular_brands.regular_big акции

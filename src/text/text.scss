@@ -29,6 +29,18 @@ i {
     }
 }
 
+.promo {
+    font-family: 'Prata', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    color: #303030;
+    &_big {
+        font-size: 50px;
+        text-transform: uppercase;
+    }
+}
+
 
 .logo-main {
     font-family: 'Prata', sans-serif;

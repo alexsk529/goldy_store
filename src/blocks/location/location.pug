@@ -1,9 +1,9 @@
 include ../../pug/_image
 
 mixin location()
-    .dropdown
+    .dropdown.location
         button(
-            class="location d-flex justify-content-between align-items-center" 
+            class="location__button d-flex justify-content-between align-items-center" 
             type="button" 
             data-bs-toggle="dropdown"
             data-bs-auto-close='outside'
@@ -13,12 +13,12 @@ mixin location()
             +image('svg', 'location','location__icon')
             span.regular Санкт-Петербург
             +image('svg', 'arrow-down','location__arrow')
-        ul.dropdown-menu
-            li.dropdown-list-item
-                a.dropdown-item.active Санкт-Петербург
-            li.dropdown-list-item
-                a.dropdown-item Москва
-            li.dropdown-list-item
-                a.dropdown-item Нижний Новгород
-            li.dropdown-list-item
-                a.dropdown-item Ростов-на-Дону 
+        ul.location__menu.dropdown-menu
+            li.location__item.dropdown-list-item
+                a.location__link.dropdown-item.active Санкт-Петербург
+            li.location__item.dropdown-list-item
+                a.location__link.dropdown-item Москва
+            li.location__item.dropdown-list-item
+                a.location__link.dropdown-item Нижний Новгород
+            li.location__item.dropdown-list-item
+                a.location__link.dropdown-item Ростов-на-Дону 

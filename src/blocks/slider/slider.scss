@@ -1,0 +1,50 @@
+.slider {
+    width: 100%;
+    padding: 21.55%;
+    background-color: #F8F8F8;
+    position: relative;
+
+    &__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    &__item {
+        height: 100%;
+    }
+
+    &__indicators {
+        margin: 0 auto 24px;
+    }
+
+    &__button {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        border: 1px solid #303030;
+        background-color: #ffffff;
+        padding: 0;
+        transition: 0.3s all ease;
+        top: 50%;
+        transform: translateY(-50%);
+        &:hover {
+            background-color: #F5F5F5;
+        }
+        &_left {
+            margin-left: 24px;
+            &:active img {
+                transition: 0.3s all ease;
+                transform: translateX(-8px);
+            }
+        }
+        &_right {
+            margin-right: 24px;
+            &:active img {
+                transition: 0.3s all ease;
+                transform: translateX(8px);
+            }
+        }
+    }
+}

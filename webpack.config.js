@@ -28,7 +28,7 @@ fs.writeFile("src/libs/_libs.pug", mixins, (err) => {
 const styles = globule
     .find(["src/blocks/**/*.scss"])
     .map((path) => path.split('/').pop().split('.').slice(0, 1))
-    .reduce((acc, currentItem) => acc + `@use \"../blocks/${currentItem}/${currentItem}.scss\";\n`, ``)
+    .reduce((acc, currentItem) => acc + `@import \"../blocks/${currentItem}/${currentItem}.scss\";\n`, ``)
 
 fs.writeFile("src/libs/_libs.scss", styles, (err) => {
     if (err) throw err;

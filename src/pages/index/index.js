@@ -9,7 +9,7 @@ Array.from(document.querySelectorAll('.dropdown'))
         const dp = new bootstrap.Dropdown(dropdown);
         const label = dropdown.querySelector('.regular');
         const arrow = dropdown.querySelector('.location__arrow');
-        const menu = dropdown.querySelector('.dropdown-menu');
+        const menu = dropdown.querySelector('.location__menu');
 
         dropdown.addEventListener('show.bs.dropdown', (e) => {
             arrow.classList.add('location__arrow_reversed');
@@ -20,9 +20,14 @@ Array.from(document.querySelectorAll('.dropdown'))
 
         dp._menu.addEventListener('click', (e) => {
             if (e.target.tagName !== 'A') return;
-            const menu = e.target.closest('.dropdown-menu');
+            const menu = e.target.closest('.location__menu');
             Array.from(menu.children).forEach(el => el.firstChild.classList.remove('active'));
             e.target.classList.add('active')
             label.innerHTML = dropdown.querySelector('.active').innerHTML;
         });
     })
+
+Array.from(document.querySelectorAll('.carousel'))
+    .forEach(carousel => {
+        const slider = new bootstrap.Carousel(carousel);
+    })    

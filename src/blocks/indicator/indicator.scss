@@ -1,0 +1,17 @@
+.indicator {
+    width: 40px;
+    height: 8px;
+    gap: 8px;
+    &__item {
+        padding: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid #303030;
+        outline: none;
+        background-color: #FFFFFF;
+        &.active {
+            background-color: #303030;
+        }
+    } 
+}

@@ -1,10 +1,10 @@
 @use "../../reset";
 @use "../../text/text";
-@use "../../libs/_libs.scss";
 
 $dropdown-link-active-color: none;
 $dropdown-link-active-bg: none;
 @import "~bootstrap/scss/bootstrap";
+@import "../../libs/_libs.scss";
 
 html,
 body {
@@ -27,50 +27,8 @@ main {
     }
 }
 
-.dropdown {
-    width: 180px;
-}
-
 .dropdown-menu {
     border-radius: 0%;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     border: none;
-    width: 197px;
-    height: 164px;
-    padding: 25px 0 22px 0;
-    transform: translate3d(0px, 24px, 0px);
 }
-
-.dropdown-item {
-    padding: 0;
-    padding-left: 24px;
-    font-size: 14px;
-    line-height: 32px;
-    font-family: 'Inter', sans-serif;
-    cursor: pointer;
-    user-select: none;
-
-    &:active,
-    &:focus {
-        background-color: none;
-        color: black;
-    }
-
-    &.active {
-        background: none;
-        color: black;
-
-        &::after {
-            content: '';
-            margin-left: 11px;
-            display: inline-block;
-            width: 11px;
-            height: 8px;
-            background-image: url('../../images/tick.svg');
-        }
-    }
-}
-
-// .dropdown-list-item:not(:last-child) {
-//     margin-bottom: 20px;
-// }

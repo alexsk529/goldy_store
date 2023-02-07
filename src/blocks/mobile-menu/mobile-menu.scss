@@ -26,12 +26,31 @@
         display: none;
         @media (max-width: 768px) {
             display: inline-block;
+            width: 100%;
+            margin-top: 15px;
         }
     }
 
-    &__list {
+    &__button {
+        border: none;
+        outline: none;
+        width: 100%;
+        background: #DDDDDD;
+        height: 40px;
+    }
+
+    &__dropdown {
+        width: 100%;
+    }
+
+    &__signin, &__list {
         margin-top: 15px;
         width: 100%;
+    }
+    
+    &__signin {
+        border-top: 1px solid #505050;
+        padding-top: 15px;
     }
 
     &__item {
@@ -41,13 +60,6 @@
         transition: 0.3s all ease;
         &:active {
             background-color: #E8E7E7;
-        } 
-    }
-
-    &__signin {
-        margin-top: 15px;
-        padding-top: 15px;
-        width: 100%;
-        border-top: 1px solid #505050;
+        }
     }
 }
