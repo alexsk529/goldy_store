@@ -6,8 +6,52 @@
     }
     &__geoblock {
         gap: 60px;
-    }
+        @media (max-width: 1050px) {
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+     }
     &__registrationblock {
         gap: 72px;
+        @media (max-width: 1050px) {
+            gap: 35px;
+        }
+    }
+    &__burger {
+        display: none;
+        @media (max-width: 992px) {
+            display: inline-block;
+            cursor: pointer;
+            &.header__burger_active .header__bar:nth-child(2) {
+                opacity: 0;
+            }
+            &.header__burger_active .header__bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            &.header__burger_active .header__bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
+    &__bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        border-radius: 1px;
+        margin: 5px auto;
+        background-color: black;
+        transition: 0.3s all ease-in-out;
+    }
+    &__mobile-menu {
+        width: 100%;
+        position: fixed;
+        right: -110%;
+        top: 110px;
+        transition: 0.5s;
+        &_active {
+            right: 0;
+        }
     }
 }

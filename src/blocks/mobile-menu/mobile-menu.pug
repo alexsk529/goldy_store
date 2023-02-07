@@ -1,0 +1,24 @@
+include ../signin/signin.pug
+
+mixin mobile-menu()
+    .mobile-menu.d-flex.flex-column.justify-content-center.align-items-center 
+        input(class='mobile-menu__search' placeholder="Поиск по сайту")
+        .mobile-menu__location 
+        .mobile-menu__list.d-flex.flex-column.align-items-center
+            .mobile-menu__item.d-flex.justify-content-center
+                span.regular.regular_brands.regular_big акции
+            .mobile-menu__item.d-flex.justify-content-center
+                span.regular.regular_brands.regular_big бренды
+            .mobile-menu__item.d-flex.justify-content-center
+                span.regular.regular_brands.regular_big магазины
+            .mobile-menu__item.d-flex.justify-content-center
+                span.regular.regular_brands.regular_big о нас
+            .mobile-menu__item.d-flex.justify-content-center
+                span.regular.regular_brands.regular_big доставка и оплата
+            .mobile-menu__item.d-flex.justify-content-center
+                span.regular.regular_brands.regular_big статьи
+        .mobile-menu__signin.d-flex.flex-column.align-items-center
+            .mobile-menu__item.d-flex.justify-content-center
+                span.regular.regular_brands.regular_big вход
+            .mobile-menu__item.d-flex.justify-content-center
+                span.regular.regular_brands.regular_big регистрация    

@@ -1,0 +1,53 @@
+.mobile-menu {
+    background-color: #F0F0F0;
+    width: 100%;
+    padding: 25px;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.3);
+
+    &__search {
+        max-width: 400px;
+        width: 80%;
+        height: 36px;
+        border: 1px solid #bcbcbc;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        outline: none;
+        padding-left: 5px;
+        &::placeholder {
+            color: #A2A2A2;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 100%;
+            font-weight: 400;
+        }
+    }
+
+    &__location {
+        display: none;
+        @media (max-width: 768px) {
+            display: inline-block;
+        }
+    }
+
+    &__list {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    &__item {
+        cursor:pointer;
+        padding: 10px 0;
+        width: 100%;
+        transition: 0.3s all ease;
+        &:active {
+            background-color: #E8E7E7;
+        } 
+    }
+
+    &__signin {
+        margin-top: 15px;
+        padding-top: 15px;
+        width: 100%;
+        border-top: 1px solid #505050;
+    }
+}

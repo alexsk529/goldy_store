@@ -1,6 +1,10 @@
 .icons {
     gap: 30px;
 
+    @media (max-width: 1000px) {
+        display: none;
+    }
+
     &__item {
         width: 32px;
         height: 32px;

@@ -16,12 +16,14 @@ main {
     flex: 1 1 auto;
 }
 
-.content {
-    width: 1300px;
-    padding-top: 53px;
+.index {
+    &__content {
+        width: 1300px;
+        padding-top: 53px;
 
-    @media (max-width: 1200px) {
-        width: calc(100% - 50px);
+        @media (max-width: 1350px) {
+            width: calc(100% - 50px);
+        }
     }
 }
 

@@ -6,13 +6,19 @@ include ../icons/icons.pug
 
 mixin header()
     .header.d-flex.flex-column
-        .header__contacts.d-flex.justify-content-between.align-items-center
-            .header__geoblock.d-flex.justify-content-between.align-items-center 
+        .header__contacts.d-flex.justify-content-md-between.justify-content-xs-end.align-items-center
+            .header__geoblock.d-md-flex.justify-content-between.align-items-center 
                 +location
                 +contacts
             +logo
             .header__registrationblock.d-flex.justify-content-between.align-items-center 
                 +signin
                 +icons
+                .header__burger
+                    span.header__bar
+                    span.header__bar
+                    span.header__bar
         .header__nav     
-            +navigation       
+            +navigation
+        .header__mobile-menu 
+            +mobile-menu           
