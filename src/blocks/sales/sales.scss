@@ -1,0 +1,15 @@
+.sales {
+    &__header {
+        margin-bottom: 24px;
+    }
+    &__group {
+        margin-bottom: 36px;
+        width: 100%;
+    }
+    &__items {
+        gap: 20px;
+    }
+    &__item {
+        height: 490px;
+    }
+}

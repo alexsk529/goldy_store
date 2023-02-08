@@ -2,26 +2,8 @@ include ../../pug/_image
 
 mixin slider()
     .slider.carousel(id="carousel")
-        .slider__indicators.indicator.d-flex.carousel-indicators 
-            button(
-                class="indicator__item active" 
-                aria-current="true" 
-                aria-label="Slide 1" 
-                data-bs-slide-to="0"
-                data-bs-target="#carousel"
-                )
-            button(
-                class="indicator__item" 
-                aria-label="Slide 2" 
-                data-bs-slide-to="1"
-                data-bs-target="#carousel"
-                )
-            button(
-                class="indicator__item" 
-                aria-label="Slide 3" 
-                data-bs-slide-to="2"
-                data-bs-target="#carousel"
-                )
+        .slider__indicators.carousel-indicators 
+            +indicator('carousel')
         .slider__inner.carousel-inner     
             .carousel-item.active.slider__item
                 +slide 

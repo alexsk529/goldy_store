@@ -1,0 +1,90 @@
+.group {
+
+    &__items {
+        gap: 8px;
+    }
+
+    &__badge {
+        background-color: #F0F0F0;
+        height: 40px;
+        border-radius: 21px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        line-height: 100%;
+        font-weight: 400;
+        transition: 0.3s all ease;
+        user-select: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #DDDDDD;
+        }
+
+        &:active {
+            background-color: #303030;
+            color: #ffffff;
+        }
+
+        &_active {
+            background-color: #303030;
+            color: #ffffff;
+
+            &:hover {
+                background-color: #303030;
+                color: #ffffff;
+            }
+
+            &:active {
+                background-color: #303030;
+                color: #ffffff;
+            }
+        }
+        
+    }
+    
+    &__arrows {
+        gap: 8px;
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+    
+    &__arrow {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        border: 1px solid #303030;
+        background-color: #ffffff;
+        padding: 0;
+        transition: 0.3s all ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #F5F5F5;
+        }
+        
+        &_left {
+            &:active img {
+                transition: 0.3s all ease;
+                transform: translateX(-8px);
+            }
+        }
+        
+        &_right {
+            &:active img {
+                transition: 0.3s all ease;
+                transform: translateX(8px);
+            }
+        }
+
+        &_disabled {
+            cursor: auto;
+            opacity: 0.5;
+            & img {
+                opacity: 0.5;
+            }
+        }
+    }
+}

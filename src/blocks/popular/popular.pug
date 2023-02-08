@@ -1,0 +1,12 @@
+include ../category/category.pug
+
+mixin popular()
+    .popular.d-flex.flex-column 
+        h3.promo.promo_popular Популярные категории
+        .popular__content.d-flex.flex-wrap.justify-content-center
+            +category('rings', 'Кольца')
+            +category('earrings', 'Серьги')
+            +category('wedrings', 'Помолвочные кольца')
+            +category('bracelet', 'Браслеты')
+            +category('necklace', 'Колье и подвески')
+            +category('watches', 'Часы')

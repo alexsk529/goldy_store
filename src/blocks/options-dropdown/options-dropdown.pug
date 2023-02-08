@@ -1,0 +1,17 @@
+mixin options-dropdown(options)
+    .options-dropdown.dropdown 
+        button(
+                class="options-dropdown__button d-flex justify-content-between align-items-center" 
+                type="button" 
+                data-bs-toggle="dropdown"
+                data-bs-auto-close='outside'
+                data-bs-offset='0,0' 
+                aria-expanded="false"
+            )
+            span.regular=options[0]
+            +image('svg', 'arrow-down','options-dropdown__arrow')
+        ul.options-dropdown__menu.dropdown-menu
+            each val in options
+                li.options-dropdown__item.dropdown-list-item
+                    a.dropdown-item.regular=val
+

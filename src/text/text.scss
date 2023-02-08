@@ -16,6 +16,9 @@ i {
     font-size: 14px;
     line-height: 100%;
     font-weight: 400;
+    &_white {
+        color: #F0F0F0;
+    }
     &_brands {
         font-size: 13px;
         font-weight: 500;
@@ -27,16 +30,21 @@ i {
     &_big {
         font-size: 20px;
     }
+    &_category {
+        font-size: 16px;
+    }
 }
 
 .promo {
     font-family: 'Prata', sans-serif;
     font-weight: 400;
-    font-size: 20px;
     line-height: 100%;
     color: #303030;
-    @media (max-width: 850px) {
-        font-size: 18px;
+    &_regular {
+        font-size: 20px;
+        @media (max-width: 850px) {
+            font-size: 18px;
+        }
     }
     &_big {
         font-size: 50px;
@@ -47,6 +55,9 @@ i {
         @media (max-width: 650px) {
             font-size: 26px;
         }
+    }
+    &_popular {
+        font-size: 40px;
     }
 }
 

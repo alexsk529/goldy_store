@@ -15,11 +15,15 @@
     }
 
     &__menu {
-
+        transition: 0.4s all ease;
         &.dropdown-menu {
+            height: 0;
             width: 197px;
-            height: 164px;
             padding: 18px 0 18px 0;
+            transition: 0.4s all ease;
+            &.show {
+                height: 164px;
+            }
         }
     }
 

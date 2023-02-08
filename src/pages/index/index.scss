@@ -20,10 +20,15 @@ main {
     &__content {
         width: 1300px;
         padding-top: 53px;
+        padding-bottom: 80px;
+        gap: 120px;
 
         @media (max-width: 1350px) {
             width: calc(100% - 50px);
         }
+    }
+    &__head {
+        gap: 20px;
     }
 }
 

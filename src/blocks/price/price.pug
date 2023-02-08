@@ -1,0 +1,9 @@
+mixin price (price, mainPrice)
+    .d-flex.justify-content-start
+    .price.d-flex.justify-content-between 
+        .price__numbers.d-flex.align-items-center
+            span.price__text.price__text_regular=`${price} ₽`
+            if (mainPrice) 
+                span.price__text.price__text_crossed=`${mainPrice} ₽`
+        if (mainPrice)         
+            +badge('promo')      

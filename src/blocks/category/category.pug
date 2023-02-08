@@ -1,0 +1,7 @@
+include ../../pug/_image
+
+mixin category(image, text)
+    .category.d-flex.flex-column.align-items-center.justify-content-between 
+        .category__img.d-flex.align-items-center 
+            +image('png', image)
+        p.category__text.d-flex.align-items-center.regular.regular_category=text    

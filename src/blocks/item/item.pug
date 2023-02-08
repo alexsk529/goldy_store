@@ -1,0 +1,28 @@
+include ../../pug/_image
+
+mixin item(props)
+    - props = props || {}
+    - let {img, badge = '', price, sale='', mainPrice=''} = props
+    .item
+        .item__header.d-flex.justify-content-between.align-items-start 
+            .item__badge
+                if badge
+                    +badge(badge)  
+            .item__icons.d-flex.flex-column.align-items-center
+                .item__like
+                    +like 
+                .item__eye
+            .item__img 
+                +image('png',img)
+                .item__indicator
+                    +indicator
+        .item__description.d-flex.flex-column.justify-content-end.align-items-center        
+            .item__price 
+                +price(price, mainPrice)
+            span.regular Стильное кольцо из белого золота с бриллиантами
+        .item__dropdowns
+            +options-dropdown(['Белое золото', 'Желтое золото', 'Серебро'])
+            +options-dropdown(['Размер: 16', 'Размер: 17', 'Размер: 18'])                
+
+
+            

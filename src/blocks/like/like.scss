@@ -1,0 +1,19 @@
+.like {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    &__icon {
+        color: #C9C9C9;
+        user-select: none;
+        transition: 0.3s all ease;
+        &:hover {
+            color: #979797;
+        }
+        &:active, &_active {
+            color: #E24B33;
+            &:hover {
+                color: #E24B33;
+            }
+        }
+    }
+}

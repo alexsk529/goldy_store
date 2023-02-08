@@ -1,0 +1,24 @@
+.badge {
+    width: 50px;
+    height: 21px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    font-size: 13px;
+    line-height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    user-select: none;
+
+    &_sale {
+        background-color: #5B8A8F;
+    }
+    &_hit {
+        background-color: #E1A661;
+    }
+    &_new {
+        background-color: #495159;
+    }
+    &_promo {
+        background-color: #E24B33;
+    }
+}

@@ -1,0 +1,29 @@
+mixin sales()
+    .sales.d-flex.flex-column.align-items-start 
+        h3.promo.promo_popular.sales__header Распродажа
+        .sales__group 
+            +group
+        .sales__items.d-flex.flex-wrap.justify-content-center
+            .sales__item
+                +item({
+                    img: 'ring1',
+                    badge: 'sale',
+                    price: '41 000',
+                    sale: '-45%',
+                    mainPrice: '65 000',
+                })
+            .sales__item     
+                +item({
+                    img: 'ring2',
+                    price: '56 000',
+                })
+            .sales__item     
+                +item({
+                    img: 'ring3',
+                    price: '37 500',
+                })
+            .sales__item    
+                +item({
+                    img: 'ring4',
+                    price: '39 200',
+                })    

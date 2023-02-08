@@ -1,0 +1,16 @@
+mixin badge (title)
+    if title
+        - className=`badge badge_${title} d-flex justify-content-center align-items-center`
+    else 
+        - className="badge d-flex justify-content-center align-items-center"    
+    div(class=className)
+        if title=='sale'
+            |Sale
+        else if title=='new'
+            |New
+        else if title=='hit'
+            |Хит
+        else if title=='promo'
+            |-45%            
+
+            

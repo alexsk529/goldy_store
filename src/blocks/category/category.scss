@@ -1,0 +1,27 @@
+.category {
+    width: 200px;
+    height: 259px;
+    background-color: #F8F8F8;
+    position: relative;
+    cursor: pointer;
+    &:hover &__img{
+        transform: scale(1.2);
+    }
+    &__img {
+        transition: 0.3s all ease;
+        max-width: 128px;
+        height: 100%;
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        } 
+    }
+
+    &__text {
+        height: 57px;
+        max-width: 148px;
+        text-align: center;
+        margin: 0;
+    }
+}

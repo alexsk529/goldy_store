@@ -1,0 +1,12 @@
+mixin group 
+    .group.d-flex.justify-content-md-between.justify-content-sm-center.align-items-center 
+        .group__items.d-flex.flex-wrap
+            .group__badge.group__badge_active.d-flex.align-items-center Кольца
+            .group__badge.d-flex.align-items-center Серьги
+            .group__badge.d-flex.align-items-center Браслеты
+            .group__badge.d-flex.align-items-center Часы
+        .group__arrows.d-md-flex
+            button.group__arrow.group__arrow_left
+                +image('svg', 'arrowleft') 
+            button.group__arrow.group__arrow_right
+                +image('svg', 'arrowright')

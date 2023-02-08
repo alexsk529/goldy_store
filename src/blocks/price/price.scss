@@ -1,0 +1,21 @@
+.price {
+    &__numbers {
+        gap: 8px;
+    }
+
+    &__text {
+        font-family: 'Inter', sans-serif;
+        line-height: 100%;
+        &_regular {
+            font-weight: 600;
+            font-size: 18px;
+            color: #303030;
+        }
+        &_crossed {
+            font-weight: 400;
+            font-size: 14px;
+            text-decoration: line-through;
+            color: #8F8F8F;
+        }
+    }
+}
