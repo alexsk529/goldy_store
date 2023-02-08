@@ -26,4 +26,8 @@ mixin sales()
                 +item({
                     img: 'ring4',
                     price: '39 200',
-                })    
+                })
+        .sales__promo.d-flex.flex-wrap.justify-content-center 
+            +item-sales('скидки на все украшения с бриллиантами', '50', 'green', 'itemsales1')
+            +item-sales('скидки на кольца и браслеты', '40', 'red', 'itemsales2')
+            +item-sales('снижение цен на обручальные кольца', '60', 'orange', 'itemsales3')            

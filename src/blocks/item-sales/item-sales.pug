@@ -1,0 +1,11 @@
+include ../../pug/_image
+
+mixin item-sales(text, sales, color, img) 
+    .item-sales 
+        .item-sales__content.d-flex.flex-column.align-items-start 
+            span.item-sales__text=text
+            div(class=`item-sales__label item-sales__label_${color} d-flex justify-content-center align-items-center`) 
+                span='До '
+                span=` -${sales}%`
+        .item-sales__img 
+            +image('png',img)        
