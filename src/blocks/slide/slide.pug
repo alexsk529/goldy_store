@@ -5,6 +5,5 @@ mixin slide()
         .slide__promo.d-flex.flex-column.align-items-start 
             span.promo.promo_regular Суперскидка 60%
             span.promo.promo_big на бриллианты
-            button.slide__more.d-flex.justify-content-center.align-items-center 
-                span подробнее
+            +button('small', 'black', 'подробнее')
         +image('png', 'ring','slide_img')

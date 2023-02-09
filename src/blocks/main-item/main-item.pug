@@ -1,0 +1,25 @@
+include ../../pug/_image
+
+mixin main-item() 
+    section.main-item.d-flex.flex-column
+        .main-item__header.d-flex.justify-content-between 
+            h3.promo.promo_popular Товар дня
+            .main-item__arrows.d-md-flex
+                button.main-item__arrow.main-item__arrow_left
+                    +image('svg', 'arrowleft') 
+                button.main-item__arrow.main-item__arrow_right
+                    +image('svg', 'arrowright')
+        .main-item__content.d-flex.flex-wrap
+            .main-item__logo
+                .main-item__badges.d-flex 
+                    +badge('new')
+                    +badge('hit')
+                    +badge('sale')
+                .main-item__small-arrows.d-flex.justify-content-between
+                    .main-item__small-arrow__prev   
+                        +image('svg', 'arrowprev')
+                    .main-item__small-arrow__next   
+                        +image('svg', 'arrownext')
+                +image('png', 'mainitem','main-item__img')                  
+            .main-item__options
+                +options 

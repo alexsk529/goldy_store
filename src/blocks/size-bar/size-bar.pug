@@ -1,0 +1,5 @@
+mixin size-bar(sizes)
+    .size-bar.d-flex.flex-wrap
+        each val in sizes 
+            .size-bar__item.d-flex.justify-content-center.align-items-center 
+                span.regular=val

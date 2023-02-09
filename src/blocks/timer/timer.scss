@@ -1,0 +1,44 @@
+.timer {
+    width: 224px;
+    height: 64px;
+    background-color: #F5F5F5;
+    padding: 12px 14px;
+    &__section {
+        background-color: #ffffff;
+        border: 1px solid #d0d0d0;
+        width: 52px;
+        height: 40px;
+        padding-top: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2px;
+    }
+    &__delim {
+        gap: 4px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__dot {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: #303030;
+    }
+    &__number {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        color: #303030;
+        text-align: center;
+    }
+    &__text {
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 100%;
+        color: #303030;
+        text-align: center;
+    }
+}

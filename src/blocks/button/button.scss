@@ -1,0 +1,60 @@
+.button {
+    outline: none;
+    border: none;
+    transition: 0.4s all ease;
+
+    & span {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        text-transform: uppercase;
+    }
+    
+    &_big {
+        width: 400px;
+        height: 56px;
+        @media (max-width: 610px) {
+            width: 100%;
+        }
+    }
+    &_small {
+        width: 200px;
+        height: 54px;
+        @media (max-width: 650px) {
+            height: 32px;
+        }
+        
+    }
+    &_black {
+        background-color: #303030;
+        & span {
+            color: #ffffff;
+        }
+        &:hover {
+            background-color: #505050;
+        }
+        &:active{
+            background-color: #000000;
+        }
+    }
+    &_white {
+        background-color: #ffffff;
+        border: 1px solid #303030;
+        & span {
+            color: #303030;
+        }
+        &:hover {
+            background-color: #303030;
+            & span {
+                color: #ffffff;
+            }
+        }
+        &:active {
+            background-color: #000000;
+            & span {
+                color: #ffffff;
+            }
+        }
+    }
+}

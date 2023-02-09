@@ -1,0 +1,37 @@
+.color {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #DADADA;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    &:hover {
+        border: 1px solid #303030;
+    }
+    &_active {
+        border: 1px solid #303030;
+    }
+    &::after {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+    }
+    &_gray::after {
+        background-color: #D9D9D9;
+    }
+    &_gold::after {
+        background-color: #F1CB7E;
+    }
+    &_orange::after {
+        background-color: #EA8C48;
+    }
+    &_green::after {
+        background-color: #A7E492;
+    }
+}

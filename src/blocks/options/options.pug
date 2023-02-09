@@ -1,0 +1,48 @@
+include ../../pug/_image
+
+mixin options()
+    .options.d-flex.flex-column
+        .options__rate.d-flex
+            .options__stars.d-flex
+                +image('svg', 'starfilled')
+                +image('svg', 'starfilled')
+                +image('svg', 'starfilled')
+                +image('svg', 'starfilled')
+                +image('svg', 'staroutlined')
+            span.regular 4,2
+        h3.promo.options__header Кольцо из золота с бриллиантами
+        span.regular.options__subheader Артикул: 1012076
+        .options__sale.d-flex.justify-content-start.flex-wrap
+            .options__price.d-flex.align-items-end.justify-content-between    
+                +price('22 000', '22 000')
+            .options__timer
+                +timer
+        .options__divider
+        .options__colors.d-flex.flex-column
+            span.options__title цвет
+            .options__choice.d-flex
+                +color('gray')
+                +color('gold')
+                +color('orange')
+                +color('green')
+        .options__size.d-flex.flex-column
+            .options__tooltip.d-flex.align-items-center 
+                span.options__title размер
+                +tip
+            .options__size-bar
+                +size-bar(['16,5', '17,5','18,5', '19', '19,5', '19,5', '18,5', '19', '19,5', '19,5'])      
+        .options__buttons.d-flex.flex-wrap
+            .options__bars.d-flex.flex-column 
+                +button('big', 'black', 'в корзину')
+                +button('big', 'white', 'купить в 1 клик')
+            .options__icons
+                .options__icon
+                    +like 
+                    span.regular Сохранить
+                .options__icon
+                    +image('svg', 'chart2') 
+                    span.regular Сравнить
+                .options__icon
+                    +image('svg', 'share')
+                    span.regular Поделиться                       
+

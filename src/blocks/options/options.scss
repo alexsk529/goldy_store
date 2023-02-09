@@ -1,0 +1,140 @@
+.options {
+    &__rate {
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    &__stars {
+        gap: 6px;
+    }
+
+    &__header {
+        font-size: 32px;
+        margin-bottom: 20px;
+        @media (max-width: 400px) {
+            font-size: 26px;
+        }
+    }
+
+    &__subheader {
+        color: #8F8F8F;
+        margin-bottom: 2px;
+    }
+
+    &__sale {
+        margin-bottom: 20px;
+        gap: 36px;
+        @media (max-width: 555px) {
+            gap: 15px;
+        }
+
+        & span.price__text_regular {
+            font-size: 20px;
+        }
+
+        & span.price__text_crossed {
+            font-size: 16px;
+        }
+    }
+
+    &__price {
+        padding-bottom: 13px;
+        width: 242px;
+    }
+
+    &__divider {
+        width: 100%;
+        border-bottom: 1px solid #F0F0F0;
+        margin-bottom: 30px;
+    }
+
+    &__colors {
+        gap: 16px;
+        margin-bottom: 33px;
+    }
+
+    &__title {
+        font-size: 12px;
+        line-height: 100%;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        color: #303030;
+        text-transform: uppercase;
+    }
+
+    &__choice {
+        gap: 16px;
+    }
+
+    &__size {
+        gap: 14px;
+        margin-bottom: 40px;
+    }
+
+    &__tooltip {
+        gap: 8px;
+    }
+
+    &__buttons {
+        gap: 41px;
+    }
+    
+    &__bars {
+        gap: 10px;
+        @media (max-width: 610px) {
+            width: 100%;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        transition: 0.3s all ease;
+        cursor: pointer;
+        gap: 10px;
+        @media (max-width: 610px) {
+            display: none;
+        }
+
+        & img,
+        & .like-icon {
+            width: 23px;
+        }
+
+        & span {
+            transition: 0.3s all ease;
+            font-weight: 300;
+        }
+
+        &:hover {
+            & .regular {
+                opacity: 0.5;
+            }
+            & .like__icon {
+                color: #979797;
+            }
+            & .like__icon_active {
+                color: #E24B33;
+            }
+        }
+
+        &:not(:first-child) {
+            & img {
+                opacity: 0.65;
+            }
+
+            &:hover {
+                & img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}
