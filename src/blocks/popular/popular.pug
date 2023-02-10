@@ -1,8 +1,9 @@
 include ../category/category.pug
 
 mixin popular()
-    section.popular.d-flex.flex-column 
-        h3.promo.promo_popular Популярные категории
+    section.popular.d-flex.flex-column
+        .popular__header 
+            h3.promo.promo_popular Популярные категории
         .popular__content.d-flex.flex-wrap.justify-content-center
             +category('rings', 'Кольца')
             +category('earrings', 'Серьги')

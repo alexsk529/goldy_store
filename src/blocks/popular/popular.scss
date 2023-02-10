@@ -1,5 +1,13 @@
 .popular {
     gap: 40px;
+    &__header {
+        @media (max-width: 768px) {
+            width: 100%;
+            & .promo {
+                text-align: center;
+            }
+        }
+    }
     &__content {
         gap: 20px;
     }

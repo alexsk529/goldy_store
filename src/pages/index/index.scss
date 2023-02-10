@@ -27,6 +27,10 @@ h1, h3, span, div {
         padding-bottom: 80px;
         gap: 120px;
 
+        @media (max-width: 1130px) {
+            gap: 50px;
+        }
+
         @media (max-width: 1350px) {
             width: calc(100% - 50px);
         }

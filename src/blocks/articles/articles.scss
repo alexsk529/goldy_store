@@ -1,0 +1,40 @@
+.articles {
+    gap: 40px;
+
+    @media (max-width: 380px) {
+        gap: 20px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+
+    &__more {
+        display: flex;
+        gap: 12px;
+        transition: 0.3s all ease;
+        cursor: pointer;
+        & span {
+            font-size: 14px;
+            line-height: 100%;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__content {
+        gap: 20px;
+    }
+}

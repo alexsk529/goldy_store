@@ -2,6 +2,9 @@
 
     &__items {
         gap: 8px;
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
     }
 
     &__badge {

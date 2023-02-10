@@ -1,17 +1,36 @@
 .main-item {
     gap: 40px;
 
+    @media (max-width: 1271px) {
+        gap: 10px;
+    }
+
+    &__header {
+        justify-content: space-between;
+        @media (max-width: 1271px) {
+            justify-content: center;
+            & .promo {
+                text-align: center;
+            }
+        }
+    }
+
     &__content {
         gap: 100px;
+        @media (max-width: 1271px) {
+            gap: 20px;
+        }
     }
 
     &__arrows {
+        display: flex;
         gap: 8px;
-        @media (max-width:768px) {
+
+        @media (max-width:1271px) {
             display: none;
         }
     }
-    
+
     &__arrow {
         width: 54px;
         height: 54px;
@@ -25,44 +44,50 @@
         &:hover {
             background-color: #F5F5F5;
         }
-        
+
         &_left {
             &:active img {
                 transition: 0.3s all ease;
                 transform: translateX(-8px);
             }
         }
-        
+
         &_right {
             &:active img {
                 transition: 0.3s all ease;
                 transform: translateX(8px);
             }
         }
-    }    
+    }
+
     &__logo {
         position: relative;
     }
+
     &__img {
         max-width: 100%;
         height: auto;
         object-fit: cover;
     }
+
     &__badges {
         gap: 4px;
         position: absolute;
         top: 16px;
         left: 16px;
     }
+
     &__small-arrows {
         position: absolute;
         width: 100%;
-        top:50%;
+        top: 50%;
         transform: translateY(-50%);
     }
+
     &__small-arrow__next {
         cursor: pointer;
         transition: 0.3s all ease;
+
         &:hover {
             opacity: 0.5;
         }

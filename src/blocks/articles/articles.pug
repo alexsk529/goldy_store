@@ -1,0 +1,30 @@
+include ../../pug/_image
+
+mixin articles()
+    section.articles.d-flex.flex-column
+        .articles__header
+            h3.promo.promo_popular Статьи
+            .articles__more
+                span читать все
+                +image('svg', 'arrowright')
+        .articles__content.d-flex.flex-wrap.justify-content-center 
+            +article({
+                image: 'awedrings',
+                date: '21 сентября 2021',
+                title: 'Обручальные кольца: тренды 2021'
+            })
+            +article({
+                image: 'awoman',
+                date: '25 сентября 2021',
+                title: 'Главные ювелирные тренды года'
+            })
+            +article({
+                image: 'apearls',
+                date: '21 сентября 2021',
+                title: 'Жемчуг: 7 малоизвестных фактов о культовом украшении'
+            })
+            +article({
+                image: 'anecklace',
+                date: '21 сентября 2021',
+                title: 'Как отличить золото от подделки: 10 практических советов'
+            })

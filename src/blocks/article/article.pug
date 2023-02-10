@@ -1,0 +1,13 @@
+include ../../pug/_image
+
+mixin article(props)
+    - props = props || {}
+    - let {image, date, title} = props
+    .article.d-flex.flex-column.justify-content-start 
+        .article__img   
+            +image('png', image)
+        .article__date 
+            span.regular=date 
+        .article__title 
+            span=title        
+        
