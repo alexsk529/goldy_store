@@ -15,11 +15,13 @@ mixin slider()
             class="slider__button slider__button_left carousel-control-prev d-md-flex justify-content-center align-items-center" 
             type="button" 
             data-bs-target="#carousel"
+            data-bs-slide="prev"
             )
             +image('svg', 'arrowleft')
         button(
             class="slider__button slider__button_right carousel-control-next d-md-flex justify-content-center align-items-center" 
             type="button" 
             data-bs-target="#carousel"
+            data-bs-slide="next"
             )
             +image('svg', 'arrowright')          
